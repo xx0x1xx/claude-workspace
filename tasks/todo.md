@@ -86,15 +86,28 @@
 - [x] 2. 브라우저로 열기
 - [x] 3. 휴대폰 폭·PC 폭에서 깨지지 않는지 확인 → progress.md 기록
 
-## 2026-10-14 — claude-workspace GitHub 업로드 (⏸ 계획 승인 대기)
+## 2026-10-14 — claude-workspace GitHub 업로드 (✅ 완료)
 
 > 사전 확인: 텍스트 파일에서 키·토큰·Webhook 주소 패턴 검사 → 발견 없음. 키 이름 빈 파일은 이미 삭제됨.
 > git 사용자 이름/이메일 미설정 상태.
 
-- [ ] 1. `.gitignore` 작성 — 반드시 제외: `.env`·`*.key`·`*.pem`·`id_rsa*`·`credentials*`, 원본 데이터 `docs/DATA_DOWN_2608.csv`(618MB, USER_ID·생년·지역 포함), `*.bak`, `weather.txt`(자동 생성 기록)
-- [ ] 2. `READ.md` 백업(`READ.md.bak`) 후 폴더 구조 트리 + 파일별 설명으로 정리
-- [ ] 3. `git init` + 이 폴더 전용 git 이름/이메일 설정 (이메일은 GitHub 비공개용 noreply 주소)
-- [ ] 4. `git add` 후 **올라갈 파일 목록을 보여드리고 확인** — 민감 파일이 없는지 재검사
-- [ ] 5. 첫 커밋 "Initial setup"
-- [ ] 6. `gh repo create claude-workspace --private` 로 만들고 push
-- [ ] 7. GitHub에서 private 여부·파일 목록 확인 → progress.md 기록
+- [x] 1. `.gitignore` 작성 — 반드시 제외: `.env`·`*.key`·`*.pem`·`id_rsa*`·`credentials*`, 원본 데이터 `docs/DATA_DOWN_2608.csv`(618MB, USER_ID·생년·지역 포함), `*.bak`, `weather.txt`(자동 생성 기록)
+- [x] 2. `READ.md` 백업(`READ.md.bak`) 후 폴더 구조 트리 + 파일별 설명으로 정리
+- [x] 3. `git init` + 이 폴더 전용 git 이름/이메일 설정 (이메일은 GitHub 비공개용 noreply 주소)
+- [x] 4. `git add` 후 **올라갈 파일 목록을 보여드리고 확인** — 민감 파일이 없는지 재검사
+- [x] 5. 첫 커밋 "Initial setup"
+- [x] 6. `gh repo create claude-workspace --private` 로 만들고 push
+- [x] 7. GitHub에서 private 여부·파일 목록 확인 → progress.md 기록
+
+## 2026-10-14 — 포트폴리오 Vercel 배포 준비 (✅ 준비 완료 · 배포는 사용자)
+
+> Vercel 배포(Import·Deploy)는 사용자가 직접. 여기서는 배포 직전까지 준비만.
+
+- [x] 1. 배포용 저장소 정리 (방식은 사용자 선택: A 별도 저장소 / B 지금 저장소 + Root Directory)
+- [ ] 2. (사용자) 공개 전 내용 점검: 예시 경력(○○회사)·예시 연락처 → 실제 정보로 교체 또는 섹션 정리
+- [x] 3. 웹 배포용 보강
+  - 파비콘(브라우저 탭 아이콘), 링크 공유 시 미리보기(OG 태그)
+  - `vercel.json`: 보안 헤더, 깔끔한 주소(cleanUrls)
+  - 404 페이지
+- [x] 4. 로컬 확인(스크린샷) → 커밋 → GitHub push
+- [x] 5. Vercel 직접 배포 안내서 작성 (Import 설정값 포함) → progress.md 기록

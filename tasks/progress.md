@@ -49,3 +49,18 @@
 - winget으로 GitHub CLI 2.102.0 설치 (`C:\Program Files\GitHub CLI\gh.exe`)
 - 새 PATH 기준 `gh --version` 실행 확인. 로그인(gh auth login)은 아직 안 함
 - GitHub 로그인 완료: 계정 xx0x1xx, 웹 브라우저 인증, git 프로토콜 https, 토큰은 Windows 자격 증명(keyring)에 저장
+
+## 2026-10-14 — claude-workspace GitHub 업로드
+- `.gitignore` 작성(.env·키 파일·CSV·docs 개인문서/분석결과·*.bak·weather.txt 제외), READ.md → README.md (백업 READ.md.bak) 폴더 구조 정리
+- git init(main), 작성자 xx0x1xx + GitHub noreply 이메일(이 폴더만)
+- 커밋 e90658b "Initial setup" (8개 파일) → private 저장소 https://github.com/xx0x1xx/claude-workspace push
+- 확인: visibility PRIVATE, GitHub 파일 8개 일치, 로컬=원격 e90658b
+- 문제 해결: git fetch가 Git Credential Manager 로그인 대기로 멈춤 → `gh auth setup-git`으로 github.com 인증을 gh에 연결
+
+## 2026-10-14 — 포트폴리오 Vercel 배포 준비
+- 별도 폴더 `C:\OAXL\portfolio` 생성, index.html 복사 (workspace/portfolio 원본은 그대로)
+- 추가: favicon.svg, 404.html, vercel.json(cleanUrls·보안 헤더), .gitignore, README.md(수정할 곳 + Vercel 배포 안내)
+- index.html에 파비콘·OG 태그 추가
+- 확인: 로컬 서버에서 / · favicon · 404 응답 200, 스크린샷 확인, vercel.json 형식 OK, 비밀 정보 검사 없음
+- private 저장소 https://github.com/xx0x1xx/portfolio push (fa700a5), 로컬=원격 일치
+- 남은 일(사용자): 예시 경력·연락처 교체 → Vercel Import·Deploy
