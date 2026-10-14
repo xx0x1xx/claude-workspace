@@ -1,0 +1,28 @@
+# ── 비밀 정보 (절대 올리지 않음) ──
+.env
+.env.*
+*.key
+*.pem
+id_rsa*
+*credentials*
+
+# ── 원본 데이터 (개인정보 포함, 용량 큼) ──
+*.csv
+docs/DATA_DOWN_*
+
+# ── 개인 문서 ──
+docs/resume.pdf
+docs/자기소개서_*
+
+# ── 회사 데이터 분석 결과 ──
+docs/analysis/
+콘텐츠다운로드_*.html
+
+# ── 백업·자동 생성 파일 ──
+*.bak
+weather.txt
+
+# ── 시스템 파일 ──
+Thumbs.db
+desktop.ini
+__pycache__/
